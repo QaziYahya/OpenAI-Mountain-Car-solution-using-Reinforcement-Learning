@@ -146,7 +146,7 @@ def train():
     if (i+1) % 100 == 0:
         print(f"\rEpisode {i+1} | Total point average of the last {100} episodes: {avg_points:.2f}")
 
-    if(avg_points >= 1):
+    if(avg_points >= -130):
       print(f"Environment solved in {i+1} episodes!")
       q_network.save('./mountain_car_model.h5')
       break
